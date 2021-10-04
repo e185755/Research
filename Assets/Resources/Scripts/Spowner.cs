@@ -43,23 +43,23 @@ public class Spowner : MonoBehaviour
             Debug.Log("Chenge!");
             countTime += Time.deltaTime;
             //GetRandom (SpownNmber)
-            ChooseSpown = 1;
+            ChooseSpown = Random.Range(1, 5);;
             if(countTime >= 3)
             {
                 countTime = 0;
                 switch(ChooseSpown)
                 {
                     case 1:
-                        enemy = Instantiate (Chara, Spowner1.transform);
+                        enemy = Instantiate (Chara, Spowner1.transform.position, Spowner1.transform.rotation);
                         break;
                     case 2:
-                        enemy = Instantiate (Chara, Spowner2.transform);
+                        enemy = Instantiate (Chara, Spowner2.transform.position, Spowner2.transform.rotation);
                         break;
                     case 3:
-                        enemy = Instantiate (Chara, Spowner3.transform);
+                        enemy = Instantiate (Chara, Spowner3.transform.position, Spowner3.transform.rotation);
                         break;
                     case 4:
-                        enemy = Instantiate (Chara, Spowner4.transform);
+                        enemy = Instantiate (Chara, Spowner4.transform.position, Spowner4.transform.rotation);
                         break;
                 }
             enemyScript = enemy.GetComponent<Destroy>();
