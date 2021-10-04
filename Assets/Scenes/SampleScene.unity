@@ -2647,7 +2647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 138458350094729117, guid: 983644959ccc8dc41bc70490f51dee0a, type: 3}
-  shotSpeed: 10000
+  shotSpeed: 1000
   FulBullet: 50
   shotCount: 50
 --- !u!1 &702377602
@@ -5648,12 +5648,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1635074951}
   - component: {fileID: 1635074952}
+  - component: {fileID: 1635074953}
   m_Layer: 0
   m_Name: God
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1635074951
 Transform:
@@ -5685,7 +5686,29 @@ MonoBehaviour:
   Spowner2: {fileID: 551721425}
   Spowner3: {fileID: 647836796}
   Spowner4: {fileID: 2074200143}
-  Chara: {fileID: 8036254559842417264, guid: 7c66ebc90d23d554697df6cc2ad5a96a, type: 3}
+  Chara: {fileID: 5828576401343487297, guid: 7c66ebc90d23d554697df6cc2ad5a96a, type: 3}
+--- !u!195 &1635074953
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635074950}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1636952888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7121,9 +7144,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5828576401327633412, guid: 7c66ebc90d23d554697df6cc2ad5a96a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5828576401343487297, guid: 7c66ebc90d23d554697df6cc2ad5a96a, type: 3}
       propertyPath: m_Name
       value: Enemy2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828576401343487297, guid: 7c66ebc90d23d554697df6cc2ad5a96a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5828576401343487298, guid: 7c66ebc90d23d554697df6cc2ad5a96a, type: 3}
       propertyPath: Target

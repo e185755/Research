@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class AIOperation : MonoBehaviour
 {
     public GameObject TargetObject; /// 目標位置
-    NavMeshAgent m_navMeshAgent; // NavMeshAgent
+    internal NavMeshAgent m_navMeshAgent; // NavMeshAgent
     private float shotInterval; //射撃間隔
     public float shotSpeed;　
     [SerializeField]

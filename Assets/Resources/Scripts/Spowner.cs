@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Spowner : MonoBehaviour
 {
@@ -15,11 +16,14 @@ public class Spowner : MonoBehaviour
     private float countTime = 0;//
     private GameObject enemy; 
     private Destroy enemyScript;
+    private AIOperation AIScript;
+    private NavMeshAgent StartNavMeshAgent; // NavMeshAgent
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // NavMeshAgentコンポーネントを取得
+        StartNavMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -60,6 +64,8 @@ public class Spowner : MonoBehaviour
                 }
             enemyScript = enemy.GetComponent<Destroy>();
             enemyScript.God = this.gameObject;
+            AIScript = enemy.GetComponent<AIOperation>();
+            AIScript.m_navMeshAgent = StartNavMeshAgent;
             GoSing = 0;
             }
         }

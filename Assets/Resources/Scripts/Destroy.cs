@@ -22,7 +22,7 @@ public class Destroy : MonoBehaviour
         }
         if (HP <= 0)
         {
-            Debug.Log("Chenge!");
+            Debug.Log("DestroyStert!");
             script.GoSing = 1; //取得したスクリプトの変数の値を変更
             Destroy (this.gameObject);
         }
