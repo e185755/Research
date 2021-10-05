@@ -2647,7 +2647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 138458350094729117, guid: 983644959ccc8dc41bc70490f51dee0a, type: 3}
-  shotSpeed: 1000
+  shotSpeed: 500
   FulBullet: 50
   shotCount: 50
 --- !u!1 &702377602
@@ -7168,6 +7168,10 @@ PrefabInstance:
       propertyPath: God
       value: 
       objectReference: {fileID: 1635074950}
+    - target: {fileID: 5828576401343487308, guid: 7c66ebc90d23d554697df6cc2ad5a96a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5828576401343487310, guid: 7c66ebc90d23d554697df6cc2ad5a96a, type: 3}
       propertyPath: m_RootOrder
       value: 6

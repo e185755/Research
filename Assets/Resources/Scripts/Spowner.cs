@@ -18,12 +18,14 @@ public class Spowner : MonoBehaviour
     private Destroy enemyScript;
     private AIOperation AIScript;
     private NavMeshAgent StartNavMeshAgent; // NavMeshAgent
+    private GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
         // NavMeshAgentコンポーネントを取得
         StartNavMeshAgent = GetComponent<NavMeshAgent>();
+
     }
 
     void Update()
@@ -44,6 +46,7 @@ public class Spowner : MonoBehaviour
             countTime += Time.deltaTime;
             //GetRandom (SpownNmber)
             ChooseSpown = Random.Range(1, 5);;
+            Player = GameObject.Find("FPSController");
             if(countTime >= 3)
             {
                 countTime = 0;
@@ -66,6 +69,7 @@ public class Spowner : MonoBehaviour
             enemyScript.God = this.gameObject;
             AIScript = enemy.GetComponent<AIOperation>();
             AIScript.m_navMeshAgent = StartNavMeshAgent;
+            AIScript.TargetObject = Player;
             GoSing = 0;
             }
         }
